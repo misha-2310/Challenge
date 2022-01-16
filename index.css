@@ -1,0 +1,125 @@
+import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.ham .ham-animation-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px)  ;
+    transform: rotate(-45deg) translate(-9px, 3px);
+    transition: all 0.3s ease-in-out;
+}
+.ham .ham-animation-2 {
+    opacity: 0 ;
+}
+.ham .ham-animation-3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-5px, -0px) ;
+    transition: all 0.3s ease-in-out;
+}
+input{
+    font-family:  'Poppins', sans-serif;
+}
+
+
+
+@layer components{
+
+    /* header.js */
+    .green-button{
+        @apply bg-c-cyan px-[24px] py-[12px] rounded-full text-c-white hover:opacity-50 hover:cursor-pointer;
+    }
+
+    .dropdown{
+        
+        @apply self-center bg-c-dark-violet	mt-[24px] rounded-3xl 	;
+    }
+
+    /* links */
+    .green-button-square{
+        @apply bg-c-cyan px-[43px] py-[24px] rounded-xl text-c-white hover:opacity-50 hover:cursor-pointer;
+    }
+
+    .blue-btn{
+        @apply bg-c-dark-violet px-[24px] py-[12px] rounded-full text-c-white hover:opacity-50 ;
+    }
+    
+
+}
+
+.dropdown{
+    width: calc(100% - 48px);
+    height: 390px;
+    transform: translateX(5%);
+    z-index: 10;
+    
+}
+/* bodytop */
+.hero__img{
+    min-height: 339px;
+    width: 100%;
+}
+
+/* links */
+.translate{
+    transform: translate(-50%,-50%); 
+}
+
+
+
+
+
+
+
+@media (max-width : 1040px){
+    .violetbody{
+        background-image: url(./assets/images/bg-boost-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+    .add-img-link{
+        background-image: url(./assets/images/bg-shorten-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+
+}
+
+
+@media (min-width: 1040px) {
+    .violetbody{
+        background-image: url(./assets/images/bg-boost-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+
+    .add-img-link{
+        background-image: url(./assets/images/bg-shorten-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+    
+}
+
+
+.err_class::placeholder{
+    color: hsl(0, 87%, 67%);
+
+}
+
+.err_class{
+    /* add a border  */
+    border: 2px solid hsl(0, 87%, 67%);
+}
+
+
+.kkk::-webkit-scrollbar {
+  display: none;
+}
